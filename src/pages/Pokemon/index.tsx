@@ -67,7 +67,11 @@ const Pokemon = () => {
 
                             <h1 className='text-sm font-white'>#{data?.id}</h1>
                         </div>
-                        <img src={data?.sprites?.other?.dream_world?.front_default} alt={data?.name} className="h-40 w-40 hover:scale-125 transition" />
+                        <div className='flex'>
+                            <img src={data?.sprites?.other?.dream_world?.front_default} alt={data?.name} className="h-40 w-40 hover:scale-125 transition" />
+                            <img src={data?.sprites?.front_shiny} alt={data?.name} className="h-40 w-40 hover:scale-125 transition" />
+                        </div>
+
                     </div>
                     <div className='text-center'>
                         <h1 className='font-bold text-sm border-b border-black'>Status</h1>

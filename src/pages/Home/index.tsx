@@ -17,7 +17,8 @@ const Home = () => {
     const filterItems = (input: string) => {
         const filtered = data.filter(item =>
             item.name.toLowerCase().includes(input.toLowerCase()) ||
-            item.types[0].type.name.toLowerCase().includes(input.toLowerCase())
+            item.types[0].type.name.toLowerCase().includes(input.toLowerCase()) ||
+            String(item.id).toLowerCase().includes(input.toLowerCase())
         );
         setFilter(filtered);
     };
@@ -59,7 +60,7 @@ const Home = () => {
                         className="h-16"
                     />
                     <div className="my-5 flex gap-2">
-                        <Input type="text" placeholder="Ex: Pikachu" prop={{ ...register("name") }} />
+                        <Input type="text" placeholder="Ex: Pikachu Or Type Or ID" prop={{ ...register("name") }} />
                         <input className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" type="submit" />
                     </div>
                 </form>
